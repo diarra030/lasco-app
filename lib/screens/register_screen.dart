@@ -38,12 +38,31 @@ class _RegisterScreenState extends State<RegisterScreen> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            TextField(controller: nameController, decoration: const InputDecoration(labelText: "Nom")),
-            TextField(controller: emailController, decoration: const InputDecoration(labelText: "Email")),
-            TextField(controller: passwordController, decoration: const InputDecoration(labelText: "Mot de passe"), obscureText: true),
-            TextField(controller: confirmController, decoration: const InputDecoration(labelText: "Confirmer mot de passe"), obscureText: true),
+            TextField(
+              controller: nameController,
+              decoration: const InputDecoration(labelText: "Nom"),
+            ),
+            TextField(
+              controller: emailController,
+              decoration: const InputDecoration(labelText: "Email"),
+            ),
+            TextField(
+              controller: passwordController,
+              decoration: const InputDecoration(labelText: "Mot de passe"),
+              obscureText: true,
+            ),
+            TextField(
+              controller: confirmController,
+              decoration: const InputDecoration(
+                labelText: "Confirmer mot de passe",
+              ),
+              obscureText: true,
+            ),
             const SizedBox(height: 16),
-            ElevatedButton(onPressed: register, child: const Text("S'inscrire")),
+            ElevatedButton(
+              onPressed: register,
+              child: const Text("S'inscrire"),
+            ),
             const SizedBox(height: 16),
             Text(message, style: const TextStyle(color: Colors.green)),
           ],
